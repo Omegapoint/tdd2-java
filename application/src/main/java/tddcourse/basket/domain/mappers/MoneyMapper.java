@@ -17,7 +17,7 @@ public class MoneyMapper {
     }
 
     public static MoneyEntity moneyToEntity(Money cost) {
-        return MoneyEntity.valueOf(cost.getUnits(), cost.getDecimalPlaces(), cost.getCurrency());
+        return MoneyEntity.valueOf(cost.getUnits()*10, cost.getDecimalPlaces(), cost.getCurrency());
     }
 
     public static MoneyDTO moneyToDTO(Money cost) {
