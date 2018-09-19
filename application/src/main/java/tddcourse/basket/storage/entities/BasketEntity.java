@@ -9,24 +9,24 @@ import java.util.UUID;
 @Document
 public class BasketEntity {
 
-  @Id
-  private UUID id;
-  private List<ProductEntity> productEntities;
+    @Id
+    private UUID id;
+    private List<ProductEntity> productEntities;
 
-  private BasketEntity(UUID id, List<ProductEntity> productEntities) {
-    this.id = id;
-    this.productEntities = productEntities;
-  }
+    private BasketEntity(UUID id, List<ProductEntity> productEntities) {
+        this.id = id;
+        this.productEntities = productEntities;
+    }
 
-  public static BasketEntity valueOf(UUID id, List<ProductEntity> productEntities) {
-    return new BasketEntity(id, productEntities);
-  }
+    public static BasketEntity valueOf(UUID id, List<ProductEntity> productEntities) {
+        return new BasketEntity(id, productEntities);
+    }
 
-  public List<ProductEntity> getProductEntities() {
-    return productEntities;
-  }
+    public List<ProductEntity> getProductEntities() {
+        return productEntities;
+    }
 
-  public UUID getId() {
-    return id;
-  }
+    public UUID getId() {
+        return id;
+    }
 }

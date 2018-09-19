@@ -7,44 +7,45 @@ import java.time.format.DateTimeFormatter;
 
 public class ErrorDTO {
 
-  private LocalDateTime timestamp;
-  private HttpStatus status;
-  private String error;
-  private String message;
-  private String path;
+    private LocalDateTime timestamp;
+    private HttpStatus status;
+    private String error;
+    private String message;
+    private String path;
 
-  private ErrorDTO() {}
+    private ErrorDTO() {
+    }
 
-  public LocalDateTime getTimestamp() {
-    return timestamp;
-  }
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
 
-  public void setTimestamp(String time) {
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
-    this.timestamp = LocalDateTime.parse(time, formatter);
-  }
+    public void setTimestamp(String time) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        this.timestamp = LocalDateTime.parse(time, formatter);
+    }
 
-  public HttpStatus getStatus() {
-    return status;
-  }
+    public HttpStatus getStatus() {
+        return status;
+    }
 
-  public void setStatus(int value) {
-    this.status = HttpStatus.valueOf(value);
-  }
+    public void setStatus(int value) {
+        this.status = HttpStatus.valueOf(value);
+    }
 
-  public String getError() {
-    return error;
-  }
+    public String getError() {
+        return error;
+    }
 
-  public void setError(String error) {
-    this.error = error;
-  }
+    public void setError(String error) {
+        this.error = error;
+    }
 
-  public String getMessage() {
-    return message;
-  }
+    public String getMessage() {
+        return message;
+    }
 
-  public String getPath() {
-    return path;
-  }
+    public String getPath() {
+        return path;
+    }
 }

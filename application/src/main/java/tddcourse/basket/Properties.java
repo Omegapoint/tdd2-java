@@ -9,13 +9,13 @@ import java.net.URI;
 @ConfigurationProperties(prefix = "tdd2", ignoreInvalidFields = true)
 public class Properties {
 
-  private URI productHost;
+    private URI productHost;
 
-  public URI getProductHost() {
-    return productHost;
-  }
+    public URI getProductHost() {
+        return productHost;
+    }
 
-  public void setProductHost(String productHost) {
-    this.productHost = URI.create(productHost);
-  }
+    public void setProductHost(String productHost) {
+        this.productHost = URI.create(productHost);
+    }
 }

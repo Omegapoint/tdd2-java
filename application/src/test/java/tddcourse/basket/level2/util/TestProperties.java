@@ -9,13 +9,13 @@ import java.net.URI;
 @ConfigurationProperties(prefix = "tdd2", ignoreInvalidFields = true)
 public class TestProperties {
 
-  private URI basePath;
+    private URI basePath;
 
-  public URI getBasePath() {
-    return basePath;
-  }
+    public URI getBasePath() {
+        return basePath;
+    }
 
-  public void setBasePath(String basePath) {
-    this.basePath = URI.create(basePath);
-  }
+    public void setBasePath(String basePath) {
+        this.basePath = URI.create(basePath);
+    }
 }
