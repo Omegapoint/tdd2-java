@@ -38,7 +38,7 @@ class BasketServiceTest {
   }
 
   @Test
-  void shouldAddAppleToBasket() throws IOException {
+  void shouldAddAppleToBasket() {
     Product apple = Product.valueOf(0, "Apple", Money.valueOfSEK(6.28));
 
     Basket basket = basketService.createBasket();
