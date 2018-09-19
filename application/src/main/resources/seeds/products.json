@@ -1,0 +1,182 @@
+[
+  {
+    "id": "0",
+    "name": "Apple",
+    "cost": {
+      "units": "628",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "1",
+    "name": "Pear",
+    "cost": {
+      "units": "458",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Banana",
+    "cost": {
+      "units": "395",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Satsumas",
+    "cost": {
+      "units": "250",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Green grapes",
+    "cost": {
+      "units": "4300",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Watermelon",
+    "cost": {
+      "units": "5460",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Pineapple",
+    "cost": {
+      "units": "2395",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Kiwi",
+    "cost": {
+      "units": "895",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Passionfruit",
+    "cost": {
+      "units": "650",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Mango",
+    "cost": {
+      "units": "3150",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Orange",
+    "cost": {
+      "units": "773",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Lemon",
+    "cost": {
+      "units": "895",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Lime",
+    "cost": {
+      "units": "550",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Clementine",
+    "cost": {
+      "units": "337",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "14",
+    "name": "Avocado",
+    "cost": {
+      "units": "1695",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "15",
+    "name": "Red grapes",
+    "cost": {
+      "units": "3450",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "16",
+    "name": "Cherimoya",
+    "cost": {
+      "units": "1995",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "17",
+    "name": "Coconut",
+    "cost": {
+      "units": "1495",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "18",
+    "name": "Papaya",
+    "cost": {
+      "units": "2995",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  },
+  {
+    "id": "19",
+    "name": "Rhubarb",
+    "cost": {
+      "units": "2179",
+      "decimalPlaces": "2",
+      "currencyCode": "SEK"
+    }
+  }
+]
