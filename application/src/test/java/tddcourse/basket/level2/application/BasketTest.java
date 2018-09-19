@@ -45,69 +45,16 @@ class BasketTest {
     }
 
     private BasketDTO createBasket() {
-        return restClient.postToUri(basketPath, BasketDTO.class);
+        //Example on how to do request with restClient. Method takes uri and expected return type.
+        //return restClient.postToUri(basketPath, BasketDTO.class);
+        return null;
     }
 
     private ProductDTO getRandomProduct() {
-        List<ProductDTO> productDTOS = restClient.get(productPath, new ParameterizedTypeReference<List<ProductDTO>>() {
-        });
+        //Example on how to do request with restClient where return type is a list.
+        // List<ProductDTO> productDTOS = restClient.get(productPath, new ParameterizedTypeReference<List<ProductDTO>>() {});
 
-        Random random = new Random();
-        return productDTOS.get(random.nextInt(productDTOS.size()));
-    }
-
-    private BasketDTO addProductToBasket(BasketDTO basketDTO, ProductDTO productDTO) {
-
-        URI addToBasketURI = basketPath.resolve(basketDTO.getId() + "/product/" + productDTO.getId());
-        return restClient.postToUri(addToBasketURI, BasketDTO.class);
-    }
-
-    @Test
-    void shouldCreateBasket() {
-
-        BasketDTO basketDTO = createBasket();
-        assertThat(basketDTO).isNotNull();
-        assertThat(basketDTO.getProducts()).isNotNull().hasSize(0);
-    }
-
-    @Test
-    void shouldFetchCreatedBasket() {
-
-        BasketDTO basketDTO = createBasket();
-        URI getCreatedBasketURI = basketPath.resolve(basketDTO.getId().toString());
-        BasketDTO storedBasketDTO = restClient.get(getCreatedBasketURI, BasketDTO.class);
-        assertThat(basketDTO).isEqualTo(storedBasketDTO);
-
-    }
-
-    @Test
-    void shouldAddRandomProductToBasket() {
-        BasketDTO basketDTO = createBasket();
-        List<ProductDTO> products = basketDTO.getProducts();
-        assertThat(basketDTO).isNotNull();
-        assertThat(products).isNotNull().hasSize(0);
-
-        ProductDTO randomProduct = getRandomProduct();
-        BasketDTO basketWithProduct = addProductToBasket(basketDTO, randomProduct);
-        List<ProductDTO> basketProducts = basketWithProduct.getProducts();
-        assertThat(basketDTO).isNotNull();
-        assertThat(basketProducts).isNotNull().hasSize(1);
-        assertThat(basketProducts).contains(randomProduct);
-    }
-
-    @Test
-    void shouldCheckoutBasket() {
-        BasketDTO basketDTO = createBasket();
-        ProductDTO randomProduct = getRandomProduct();
-        BasketDTO basketWithProduct = addProductToBasket(basketDTO, randomProduct);
-        assertThat(basketDTO.getId()).isEqualTo(basketWithProduct.getId());
-
-        URI checkoutPath = UriComponentsBuilder.fromUri(basketPath.resolve(basketWithProduct.getId() + "/checkout"))
-                .queryParam("cost", basketWithProduct.getTotal())
-                .build()
-                .toUri();
-        restClient.postToUri(checkoutPath, null);
-
+        return null;
     }
 
 }
