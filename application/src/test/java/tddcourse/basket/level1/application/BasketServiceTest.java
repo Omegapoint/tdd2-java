@@ -21,40 +21,5 @@ class BasketServiceTest {
     @Autowired
     private BasketService basketService;
 
-    @Test
-    void shouldPersistEmptyBasketWhenCreated() {
-
-        Basket basket = basketService.createBasket();
-
-        Basket storedBasket = basketService.getBasket(basket.getId());
-
-        assertThat(storedBasket).isNotNull();
-        assertThat(storedBasket.productCount()).isEqualTo(0);
-        assertThat(storedBasket.getTotal()).isEqualTo(Money.ZERO("SEK"));
-        assertThat(storedBasket.getTotalWithVat()).isEqualTo(Money.ZERO("SEK"));
-    }
-
-    @Test
-    void shouldAddAppleToBasket() {
-        Product apple = Product.valueOf(0, "Apple", Money.valueOfSEK(6.28));
-
-        Basket basket = basketService.createBasket();
-
-        basketService.addProductToBasket(basket.getId(), apple.getId());
-
-        Basket storedBasket = basketService.getBasket(basket.getId());
-
-        assertThat(storedBasket)
-                .isNotNull()
-                .isNotEqualTo(basket)
-                .isNotSameAs(basket);
-
-        assertThat(storedBasket.getId())
-                .isEqualTo(basket.getId());
-
-        assertThat(storedBasket.productCount()).isEqualTo(1);
-        assertThat(storedBasket.getTotal()).isEqualTo(apple.getCost());
-        assertThat(storedBasket.getTotalWithVat()).isEqualTo(apple.getCost().multiply(1.25));
-    }
 
 }
