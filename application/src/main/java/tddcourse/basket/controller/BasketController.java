@@ -18,8 +18,7 @@ import tddcourse.basket.domain.mappers.BasketMapper;
 import tddcourse.basket.services.BasketService;
 
 @RestController
-@RequestMapping(path = "/basket",
-                consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(path = "/basket")
 public class BasketController {
 
   private BasketService basketService;
@@ -29,18 +28,18 @@ public class BasketController {
     this.basketService = basketService;
   }
 
-  @GetMapping(path = "/{basketId}")
+  @GetMapping(path = "/{basketId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public BasketDTO getBasket(@PathVariable("basketId") UUID id) {
     return BasketMapper.basketToDTO(basketService.getBasket(id));
   }
 
-  @PostMapping(path = "/")
+  @PostMapping(path = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   @ResponseStatus(HttpStatus.CREATED)
   public BasketDTO create() {
     return BasketMapper.basketToDTO(basketService.createBasket());
   }
 
-  @PostMapping(path = "/{basketId}/product/{productId}")
+  @PostMapping(path = "/{basketId}/product/{productId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public BasketDTO addProductToBasket(@PathVariable("basketId") UUID basketId, @PathVariable("productId") long productId) {
     return BasketMapper.basketToDTO(basketService.addProductToBasket(basketId, productId));
   }

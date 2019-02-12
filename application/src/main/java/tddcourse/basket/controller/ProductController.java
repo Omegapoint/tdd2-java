@@ -12,8 +12,7 @@ import tddcourse.basket.domain.dto.ProductDTO;
 import tddcourse.basket.services.ProductService;
 
 @RestController
-@RequestMapping(path = "/products",
-                consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(path = "/products")
 public class ProductController {
 
   private ProductService productService;
@@ -23,7 +22,7 @@ public class ProductController {
     this.productService = productService;
   }
 
-  @GetMapping
+  @GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public List<ProductDTO> getProducts() {
     return productService.getAllProducts();
   }
