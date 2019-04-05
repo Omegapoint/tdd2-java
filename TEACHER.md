@@ -29,12 +29,12 @@ probably the most important realization of this lab.  There is an
 external product service that is mocked out.
 
 In order to do this, you must first walk the group through the
-intended function of the system.  This is another important
-realization.  If we are to write good level 2 tests, we need to have
+intended function of the system. This is another important
+realization. If we are to write good level 2 tests, we need to have
 an understanding of the requirements.
 
 Ask the students what level 2 tests they would like to write and give
-them five minutes to think about it.� Emphasize that the purpose of
+them five minutes to think about it. Emphasize that the purpose of
 level 2 tests are to verify the function of the application.
 
 Then, list the tests on a white board that the students have agreed
@@ -52,6 +52,8 @@ There is an error to find in this lab, and that is the fact that the
 API allows the client to send in the total cost.
 
 Sending cost might be OK, but only if it is validated on the backend.
+
+Estimated time for this lab: 40-60 min
 
 # Lab 3
 
